@@ -2,6 +2,10 @@
 `Java version: 17.0.12`  `Apache Maven 3.9.5`
 ### Diagrama de solucion
 
+![Diagrama uno]([http://lmsotfy.com/so.png](https://github.com/victacora/spring-boot-user-api/blob/master/solution_diagram.png))
+
+![Diagrama dos]([http://lmsotfy.com/so.png](https://github.com/victacora/spring-boot-user-api/blob/master/class-diagram.png))
+
 ### Instalación del proyecto
 1. Clonar el repositorio en tu equipo:
 ```sh
