@@ -4,6 +4,7 @@ import com.nisum.users.application.UserUseCase;
 import com.nisum.users.infrastructure.inbound.controllers.dto.UserDTO;
 import com.nisum.users.infrastructure.inbound.controllers.mapper.UserDTOMapper;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
+@SecurityRequirement(name = "Bearer Authentication")
 @Tag(name = "Usuarios", description = "Gestion de usuarios")
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor

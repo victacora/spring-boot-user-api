@@ -29,10 +29,20 @@ public class UserUseCase {
 	}
 
 	public Optional<User> updateUser(UUID id, User user) {
+		checkUserById(user.getId());
+		user.setPassword(authenticationService.passwordEncoder(user.getPassword()));
+		user.setToken(authenticationService.token(user));
 		return this.userRepository.updateUser(id, user);
 	}
 
+	private void checkUserById(UUID id) {
+		if (!this.userRepository.findById(id).isPresent()) {
+			throw new UserNotFoundException("No existe un usuario asociado al id");
+		}
+	}
+
 	public void deleteUser(UUID userId) {
+		checkUserById(userId);
 		this.userRepository.deleteUser(userId);
 	}
 

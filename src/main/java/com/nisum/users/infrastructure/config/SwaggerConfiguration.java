@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-public class OpenAPIConfiguration {
+public class SwaggerConfiguration {
 	@Value("${info.app.name}")
 	private String appName;
 	@Value("${info.app.description}")

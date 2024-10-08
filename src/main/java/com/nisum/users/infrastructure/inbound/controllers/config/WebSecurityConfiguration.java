@@ -21,7 +21,11 @@ import java.util.Arrays;
 public class WebSecurityConfiguration {
 
 	public final static String[] PUBLIC_REQUEST_MATCHERS = {
-			"/api/v1/users/register", "/h2-console/**", "/v3/api-docs", "/v3/api-docs/**", "/swagger-resources", "/swagger-resources/**", "/swagger-ui/**", "/swagger-ui.html"
+			"/api/v1/users/register",
+			"/h2-console/**",
+			"/swagger-resources/**",
+			"/swagger-ui/**",
+			"/v3/api-docs/**"
 	};
 
 	private final JwtAuthenticationFilter jwtAuthenticationFilter;

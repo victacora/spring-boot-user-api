@@ -23,6 +23,21 @@
 ### Swagger
 1. http://localhost:8080/swagger-ui/index.html
 
+```
+{
+   "name": "German Puyo",
+   "email": "germanpuyo@test.cl",
+   "password": "1234aB$O",
+   "phoneList": [
+      {
+      "number": "3217666877",
+      "cityCode": "2",
+      "countryCode": "57"
+      }
+   ]
+}
+```
+
 ### Servicio registro
 ```
 curl -X 'POST' \
@@ -30,17 +45,17 @@ curl -X 'POST' \
 -H 'accept: */*' \
 -H 'Content-Type: application/json' \
 -d '{
-"name": "German Puyo",
-"email": "germanpuyo@test.cl",
-"password": "1234aB$O",
-"phoneList": [
-{
-"number": "3217666877",
-"cityCode": "2",
-"countryCode": "57"
-}
-]
-}
+      "name": "German Puyo",
+      "email": "germanpuyo@test.cl",
+      "password": "1234aB$O",
+      "phoneList": [
+            {
+            "number": "3217666877",
+            "cityCode": "2",
+            "countryCode": "57"
+            }
+         ]
+   }
 '
 ```
 
